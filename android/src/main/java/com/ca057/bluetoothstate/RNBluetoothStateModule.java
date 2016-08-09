@@ -34,15 +34,17 @@ public class RNBluetoothStateModule extends ReactContextBaseJavaModule {
   public void initialize() {
     BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
     if (adapter == null) {
-      // Device does not support Bluetooth
+      // device does not support Bluetooth
       sendStateEvent("centralManagerDidUpdateState", "unsupported");
     } else {
         if (!adapter.isEnabled()) {
-          // off?!
+          // correct?!
           sendStateEvent("centralManagerDidUpdateState", "off");
-        } else {
+          // use the action request intent https://developer.android.com/reference/android/bluetooth/BluetoothAdapter.html#enable()
+          // and extract it as seperate function, callable from js
           adapter.enable();
         }
+        // send sth here
         listenForBluetoothStateChanges();
     }
   }
@@ -63,16 +65,13 @@ public class RNBluetoothStateModule extends ReactContextBaseJavaModule {
                                                  BluetoothAdapter.ERROR);
             switch (state) {
             case BluetoothAdapter.STATE_OFF:
-                sendStateEvent("centralManagerDidUpdateState", "Bluetooth off");
-                break;
-            case BluetoothAdapter.STATE_TURNING_OFF:
-                sendStateEvent("centralManagerDidUpdateState", "Turning Bluetooth off...");
+                sendStateEvent("centralManagerDidUpdateState", "off");
                 break;
             case BluetoothAdapter.STATE_ON:
-                sendStateEvent("centralManagerDidUpdateState", "Bluetooth on");
+                sendStateEvent("centralManagerDidUpdateState", "on");
                 break;
-            case BluetoothAdapter.STATE_TURNING_ON:
-                sendStateEvent("centralManagerDidUpdateState", "Turning Bluetooth on...");
+            default:
+                sendStateEvent("centralManagerDidUpdateState", "unknown");
                 break;
             }
         }
