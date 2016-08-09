@@ -12,6 +12,7 @@ import {
   View,
   DeviceEventEmitter
 } from 'react-native';
+
 import BluetoothState from 'react-native-bluetooth-state';
 
 console.log(BluetoothState);
