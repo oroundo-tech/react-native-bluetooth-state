@@ -1,32 +1,41 @@
 # react-native-bluetooth-state
-Answering the question of "Is my bluetooth on?" in React Native
+Answering the question of "Is my bluetooth on?" in React Native.
 
-This module only works for iOS at the moment.
+This fork adds the functionality for Android, the README is adapted from the original one.
 
 ## Installation
 
-```
-$ npm install react-native-bluetooth-state
-```
-
 React Native >=0.7.0 is needed.
 
-You then need to add the Objective-C part to your XCode project. Drag `RNBluetoothState.xcodeproj` from the `node_modules/react-native-bluetooth-state` folder into your XCode project. Click on the your project in XCode, goto Build Phases then Link Binary With Libraries and add `libRNBluetoothState.a` and `CoreBluetooth.framework`.
+Install it via npm:
 
-(Alternatively you can use RNPM to link the library, but in any case you need to link against `CoreBluetooth.framework`.)
+```
+$ npm install --save https://github.com/Artirigo/react-native-bluetooth-state.git
+```
+
+Follow the [React Native documentation for Linking Libraries](https://facebook.github.io/react-native/docs/linking-libraries-ios.html).
 
 ## Usage
 
 ```javascript
 import BluetoothState from 'react-native-bluetooth-state';
 
-BluetoothState.subscribe(bluetoothState => {
-  // bluetoothState can either be "on", "off", "unknown", "unauthorized", "resetting" or "unsupported‚"
-});
+const stateChangeHandler = bluetoothState => {
+  // bluetoothState can either be "on", "off", "unknown", "unauthorized" or "unsupported", on iOS also "resetting"
+};
+
+// subscribe to changes
+BluetoothState.subscribe(stateChangeHandler);
 
 // Initialize needs to be called otherwise we don't get the initial state
 BluetoothState.initialize();
+
+// unsubscribe specific handler
+BluetoothState.unsubscribe(stateChangeHandler);
+
+// remove all change handlers
+BluetoothState.clear();
 ```
 
 ## License
-Unlicense or MIT. Whatever fits your purpose best.
+MIT
