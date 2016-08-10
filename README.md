@@ -15,6 +15,8 @@ $ npm install --save https://github.com/Artirigo/react-native-bluetooth-state.gi
 ### iOS
 Follow the [React Native documentation for Linking Libraries](https://facebook.github.io/react-native/docs/linking-libraries-ios.html).
 
+You also need to link the `CoreBluetooth.framework` to __Link Binary With Libraries__.
+
 ### Android
 Add the following to your `android/settings.gradle`:
 ```
