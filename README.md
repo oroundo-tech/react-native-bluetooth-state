@@ -1,7 +1,5 @@
 # react-native-bluetooth-state
-Answering the question of "Is my bluetooth on?" in React Native.
-
-This fork adds the functionality for Android, the README is adapted from the original one.
+Native module for React Native to get the current bluetooth state of the device. This is a fork of [frostney/react-native-bluetooth-state](https://github.com/frostney/react-native-bluetooth-state), which adds the functionality for Android.
 
 ## Installation
 
