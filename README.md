@@ -31,13 +31,44 @@ dependencies {
 
 ```
 
+Add the package in your `MainApplication.java`:
+
+```java
+// other imports
+import com.artirigo.bluetoothstate.RNBluetoothStatePackage;
+
+public class MainApplication extends Application implements ReactApplication {
+    // ...
+
+    protected List<ReactPackage> getPackages() {
+        return Arrays.<ReactPackage>asList(
+                new MainReactPackage(),
+                // other packages
+                new RNBluetoothStatePackage()); // <-- Add this line
+    }
+}
+```
+
 ## Usage
+
+The returned states are on both iOS and Android returned as String:
+
+- `on`
+- `off`
+- `unknown` (currently default value on Android, if other states are returned from the native module)
+- `unauthorized`
+- `unsupported`
+
+and only on iOS:
+
+- `resetting`
 
 ```javascript
 import BluetoothState from 'react-native-bluetooth-state';
 
 const stateChangeHandler = bluetoothState => {
-  // bluetoothState can either be "on", "off", "unknown", "unauthorized" or "unsupported", on iOS also "resetting"
+  // handle the state
+  console.info(bluetoothState);
 };
 
 // subscribe to changes
