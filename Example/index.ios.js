@@ -1,7 +1,6 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
- * @flow
  */
 
 import React, { Component } from 'react';
@@ -9,13 +8,10 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View,
-  DeviceEventEmitter
+  View
 } from 'react-native';
 
 import BluetoothState from 'react-native-bluetooth-state';
-
-console.log(BluetoothState);
 
 class Example extends Component {
   constructor(props) {
@@ -29,6 +25,7 @@ class Example extends Component {
   componentDidMount() {
     BluetoothState.subscribe(bluetoothState => {
       this.setState({ bluetooth: bluetoothState });
+      console.log(bluetoothState);
     });
 
     BluetoothState.initialize();
@@ -38,7 +35,7 @@ class Example extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          What's the state of my bluetooth?
+          What is my bluetooth state?
         </Text>
         <Text style={styles.instructions}>
           {this.state.bluetooth}
@@ -47,6 +44,7 @@ class Example extends Component {
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {

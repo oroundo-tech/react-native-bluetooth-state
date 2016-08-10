@@ -2,5 +2,4 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.ca057.bluetoothstate">
   <uses-permission android:name="android.permission.BLUETOOTH"/>
-  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
 </manifest>

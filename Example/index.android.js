@@ -16,7 +16,6 @@ import BluetoothState from 'react-native-bluetooth-state';
 class Example extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       bluetooth: 'unknown',
     };
@@ -27,7 +26,6 @@ class Example extends Component {
       this.setState({ bluetooth: bluetoothState });
       console.log(bluetoothState);
     });
-
     BluetoothState.initialize();
   }
 
@@ -35,7 +33,7 @@ class Example extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          BLUETOOTH STATE
+          What is my bluetooth state?
         </Text>
         <Text style={styles.instructions}>
           {this.state.bluetooth}
@@ -44,7 +42,6 @@ class Example extends Component {
     );
   }
 }
-
 
 const styles = StyleSheet.create({
   container: {
