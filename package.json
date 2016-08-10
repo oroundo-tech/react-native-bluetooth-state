@@ -1,10 +1,12 @@
 {
   "name": "react-native-bluetooth-state",
   "version": "2.1.0",
+  "description": "React Native Module for reading the bluetooth state",
   "repository": {
     "type": "git",
-    "url": "https://github.com/frostney/react-native-bluetooth-state.git"
+    "url": "https://github.com/Artirigo/react-native-bluetooth-state.git"
   },
+  "homepage": "https://github.com/Artirigo/react-native-bluetooth-state.git",
   "license": "MIT",
   "keywords": [
     "react-native",
