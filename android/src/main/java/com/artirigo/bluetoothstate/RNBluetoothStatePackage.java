@@ -1,5 +1,5 @@
 
-package com.ca057.bluetoothstate;
+package com.artirigo.bluetoothstate;
 
 import java.util.Arrays;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package com.ca057.bluetoothstate;
+package com.artirigo.bluetoothstate;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
