@@ -1,5 +1,5 @@
 # react-native-bluetooth-state
-Native module for React Native to get the current bluetooth state of the device. This is a fork of [frostney/react-native-bluetooth-state](https://github.com/frostney/react-native-bluetooth-state), which adds the functionality for Android.
+Native module for React Native to get the current bluetooth state of the device on iOS and Android.
 
 ## Installation
 
@@ -7,7 +7,7 @@ React Native >=0.7.0 is needed.
 
 Install it via npm:
 ```
-$ npm install --save https://github.com/Artirigo/react-native-bluetooth-state.git
+$ npm install --save https://github.com/frostney/react-native-bluetooth-state.git
 ```
 
 ## Link the libraries
@@ -87,4 +87,4 @@ BluetoothState.clear();
 ```
 
 ## License
-MIT
+Unlicensed or MIT

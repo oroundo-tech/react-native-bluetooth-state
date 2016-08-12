@@ -1,7 +1,7 @@
 package com.example;
 
 import com.facebook.react.ReactActivity;
-import com.artirigo.bluetoothstate.RNBluetoothStatePackage;
+import com.frostney.bluetoothstate.RNBluetoothStatePackage;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 
