@@ -1,15 +1,15 @@
 {
   "name": "react-native-bluetooth-state",
   "version": "2.1.0",
-  "description": "React Native Module for reading the bluetooth state on iOS and Android (fork of frostney/react-native-bluetooth-state)",
+  "description": "React Native Module for reading the bluetooth state on iOS and Android",
   "author": "Johannes Stein (http://github.com/frostney)",
   "contributors": "Christian Ost",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Artirigo/react-native-bluetooth-state.git"
+    "url": "https://github.com/frostney/react-native-bluetooth-state.git"
   },
-  "homepage": "https://github.com/Artirigo/react-native-bluetooth-state.git",
-  "license": "MIT",
+  "homepage": "https://github.com/frostney/react-native-bluetooth-state.git",
+  "license": "(Unlicense OR MIT)",
   "keywords": [
     "react-native",
     "react-component",
