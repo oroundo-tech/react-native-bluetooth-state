@@ -37,7 +37,7 @@ Add the package in your `MainApplication.java`:
 
 ```java
 // other imports
-import com.artirigo.bluetoothstate.RNBluetoothStatePackage;
+import com.frostney.bluetoothstate.RNBluetoothStatePackage;
 
 public class MainApplication extends Application implements ReactApplication {
     // ...
@@ -58,7 +58,7 @@ The returned states are on both iOS and Android returned as String:
 - `on`
 - `off`
 - `unknown` (currently default value on Android, if other states are returned from the native module)
-- `unauthorized`
+- `unauthorized` (on Android: if `SecurityError` is thrown when requesting the `BluetoothAdapter`)
 - `unsupported`
 
 and only on iOS:
