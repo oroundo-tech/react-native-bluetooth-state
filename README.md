@@ -3,7 +3,7 @@ Native module for React Native to get the current bluetooth state of the device.
 
 ## Installation
 
-React Native >=0.7.0 is needed.
+Since v2.2.0 React Native >=0.40.0 is needed.
 
 Install it via npm:
 ```
