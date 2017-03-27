@@ -1,7 +1,7 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 
 #import "RNBluetoothState.h"
-#import "RCTEventDispatcher.h"
+#import <React/RCTEventDispatcher.h>
 
 @interface RNBluetoothState() <CBCentralManagerDelegate>
 
