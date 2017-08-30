@@ -17,7 +17,7 @@ public class RNBluetoothStatePackage implements ReactPackage {
       return Arrays.<NativeModule>asList(new RNBluetoothStateModule(reactContext));
     }
 
-    @Override
+    // deprecated >= RN 0.47.0
     public List<Class<? extends JavaScriptModule>> createJSModules() {
       return Collections.emptyList();
     }

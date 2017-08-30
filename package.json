@@ -19,5 +19,8 @@
     "bluetooth-state"
   ],
   "main": "BluetoothState.js",
-  "devDependencies": {}
+  "devDependencies": {},
+  "peerDependencies": {
+    "react-native": ">=0.40.0"
+  }
 }
