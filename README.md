@@ -107,7 +107,7 @@ BluetoothState.clear();
 
 Contributions are always welcome! The [example](./Example) is a simple ReactNative project. To link the library for developing, [`yalc`](https://www.npmjs.com/package/yalc) is used and installed as a `devDependency` of the main project.
 
-For an easy setup, run the script [`dev-setup.sh`](./dev-setup.sh) in the root of the project. At the moment, the `react-native-cli` is required to be installed globally for it to work.
+For an easy setup, run the script [`dev-setup.sh`](./dev-setup.sh) in the root of the project. At the moment, the `react-native-cli` and `yarn` are required to be installed globally for it to work.
 
 The `yalc`-binary installed as dependency can be accessed via an npm-script (`yarn run yalc` or `npm run yalc`).
 
