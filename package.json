@@ -19,8 +19,7 @@
     "bluetooth-state"
   ],
   "scripts": {
-    "yalc": "yalc",
-    "postinstall": "./dev-setup.sh"
+    "yalc": "yalc"
   },
   "main": "BluetoothState.js",
   "devDependencies": {
